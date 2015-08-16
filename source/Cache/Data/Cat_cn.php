@@ -1,0 +1,2 @@
+<?php
+return array ( 'zszn' => '1', 'zsjz' => '2', 'zsjh' => '3', 'ddzs' => '5', 'zszc' => '4', 'xbsz' => '6', 'bmrk' => '7', 'luquchaxun' => '18', 'kswd' => '9', 'xyrk' => '10', 'dongtai' => '11', 'zskx' => '12', 'bfxy' => '13', 'xyfc' => '14', 'contactus' => '15', 'xyjy' => '16', 'bmcx' => '17', 'about' => '19', '' => '30', 'zs' => '20', 'jigong' => '22', 'benke' => '23', ); ?>

@@ -1,0 +1,224 @@
+<div class="footer">
+
+	<div class="warp">
+
+    <br>
+
+    	版权所有：山东劳动职业技术学院
+
+        &nbsp;&nbsp;地址：济南市经十路23266号（槐荫区），长清大学科技园区海棠路800号（长清校区）邮编：250022 &nbsp;&nbsp;鲁ICP备05018601号
+
+    </div>
+
+</div>
+<div class="keifu">
+  <div class="keifu_tab">
+    <div class="icon_keifu"></div>
+    <div class="keifu_box">
+      <div class="keifu_head"><a href="javascript:void(0)" class="keifu_close"></a></div>
+      <ul class="keifu_con">
+        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1148346184&site=qq&menu=yes"><img src="/static/images/qq.png"/></a></li>
+        <li><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=596543721&site=qq&menu=yes"><img src="/static/images/qq.png"/></a></li>
+        <li class="weixin"><img src="/static/images/qrcode.jpg" width="96" alt="扫一扫，访问手机端" /></li>
+		<li style="">&nbsp;&nbsp;微信二维码</li>
+      </ul>
+      <div class="keifu_bot"></div>
+    </div>
+  </div>
+</div>
+
+
+<script src="http://api.microyan.com/sdlvtc/sidebar/QAsidebar.js"></script> 
+
+<SCRIPT type=text/javascript>
+
+//设为首页
+
+function SetHome(obj,vrl){ 
+
+	try{ 
+
+		obj.style.behavior='url(#default#homepage)';obj.setHomePage(vrl); 
+
+	} 
+
+	catch(e){ 
+
+		if(window.netscape) { 
+
+			try { 
+
+					netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect"); 
+
+				 } 
+
+			catch (e) { 
+
+						alert("此操作被浏览器拒绝！n请在浏览器地址栏输入“about:config”并回车n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。"); 
+
+				} 
+
+			var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch); 
+
+			prefs.setCharPref('browser.startup.homepage',vrl); 
+
+		}else{ 
+
+		alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+vrl+"点击确定。"); 
+
+		} 
+
+	} 
+
+} 
+
+// 加入收藏 兼容360和IE6 
+
+function shoucang(sTitle,sURL){ 
+
+	try { 
+
+		window.external.addFavorite(sURL, sTitle); 
+
+	} 
+
+	catch (e) { 
+
+		try { 
+
+			window.sidebar.addPanel(sTitle, sURL, ""); 
+
+		} 
+
+		catch (e) { 
+
+			alert("加入收藏失败，请使用Ctrl+D进行添加"); 
+
+		} 
+
+	} 
+
+} 
+
+//日期
+
+function getDateInfo() {         
+
+	var day="";         
+
+	var month="";        
+
+	var ampm="";         
+
+	var ampmhour="";        
+
+	var myweekday="";         
+
+	var year="";         
+
+	mydate=new Date();         
+
+	myweekday=mydate.getDay();         
+
+	mymonth=mydate.getMonth()+1;         
+
+	myday= mydate.getDate();         
+
+	myyear= mydate.getYear();         
+
+	year=(myyear > 200) ? myyear : 1900 + myyear;         
+
+	if(myweekday == 0)
+
+		weekday=" 星期日";
+
+	else if(myweekday == 1) 
+
+		weekday=" 星期一";         
+
+	else if(myweekday == 2)  
+
+	       weekday=" 星期二";         
+
+	else if(myweekday == 3)         
+
+			weekday=" 星期三";         
+
+	else if(myweekday == 4)         
+
+			weekday=" 星期四";         
+
+	else if(myweekday == 5)         
+
+			weekday=" 星期五";         
+
+	else if(myweekday == 6)         
+
+			weekday=" 星期六";         
+
+	$('#DateInfo').html("今天是<a>"+year+"年"+mymonth+"月"+myday+"日  "+weekday+"</a>");
+
+} 
+
+	$(function(){
+
+		getDateInfo();
+
+	var KF = $(".keifu");
+
+	var wkbox = $(".keifu_box");
+
+	var kf_close = $(".keifu .keifu_close");
+
+	var icon_keifu = $(".icon_keifu");
+
+	var kH = wkbox.height();
+
+	var kW = wkbox.width();
+
+	var wH = $(window).height();
+
+	KF.css({height:kH});
+
+	icon_keifu.css("top",parseInt((kH-100)/2));
+
+	var KF_top = (wH-kH)/2;
+
+	if(KF_top<0) KF_top=0;
+
+	KF.css("top",KF_top);
+
+	$(kf_close).click(function(){
+
+		KF.animate({width:"0"},200,function(){
+
+			wkbox.hide();
+
+			icon_keifu.show();
+
+			KF.animate({width:26},300);		
+
+		});	
+
+	});
+
+	$(icon_keifu).click(function(){
+
+			$(this).hide();
+
+			wkbox.show();
+
+			KF.animate({width:kW},200);
+
+	});
+	$(kf_close).click();
+
+});
+
+
+
+</SCRIPT>
+
+</body>
+
+</html>

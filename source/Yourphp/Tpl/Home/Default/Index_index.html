@@ -1,0 +1,127 @@
+<div class="clearfix warp main" >
+	<div class="index_left fl">
+<object class id="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="380" height="205">
+  <param name="movie" value="flvplayer.swf">
+  <param name="quality" value="high">
+  <param name="allowFullScreen" value="true">
+  <param name="FlashVars" value="vcastr_file=1.flv&BufferTime=3&IsAutoPlay=1">
+  <embed src="flvplayer.swf" allowfullscreen="true" flashvars="vcastr_file=1.flv&IsAutoPlay=1" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="380" height="205"></embed>
+</object>
+	
+	</div>
+	<!--div class="index_left fl">
+    	<a id="#vedio" href="/vedio.html"><img src="/static/images/move.jpg" width="380"></a>
+    </div>
+	<script type="text/javascript" src="/static/js/jquery.fancybox-1.3.4.js"></script>
+	<script type="text/javascript" src="static/js/jquery.mousewheel-3.0.4.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/style/jquery.fancybox-1.3.4.css" media="screen" />
+	<script>
+	$("#vedio").fancybox({
+			'width':'7',
+			'height':'5',
+			'autoScale':false,
+			'transitionIn':'none',
+			'transitionOut':'none',
+			'type':'iframe'
+		});
+	</script-->
+    <div class="index_con fl">
+    	<h3 class="index_tit">招生快讯 <a href="{$Categorys[12]['url']}" class="fr"><img src="/static/images/more.jpg"></a></h3>
+        <ul class="index_list">
+		<YP:list catid="12" order="id desc" limit="6" field="*">
+            <li class="clearfix"><A href="{$r.url}" style="{$r.title_style}">{$r.title|str_cut=###,30}</A><span class="fr">{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+         </YP:list>
+        </ul>
+    </div>
+    <div class="index_con fl mr0">
+    	<h3 class="index_tit1"><a href="{$Categorys[15]['url']}">联系我们</a></h3>
+        <p class="index_l">招生热线:<br><a style="font-size:14px;padding-left:5px;"><span style="padding-right:14px;">0531—87966101</span> <span>87196580</span></a></p>
+        <p class="index_r"><a style="font-size:14px; padding-left:55px; font-weight:bold;"><span style="padding-right:50px;">87196666 </span><span>87196616</span></a></p>
+        <p class="index_r">山东劳动职业技术学院</p>
+        <p class="index_r">通讯地址：济南市经十路23266号</p>
+        <p class="index_r">长清校区：济南市长清大学科技园区海棠路800号</p>
+        <!--<p class="index_r">官方网址：http://www.sdlvtc.cn</p>-->
+    </div>
+    <div class="hr clear"></div>
+    <div class="index_left fl">
+    	<h3 class="index_tit">学院动态<a href="{$Categorys[11]['url']}" class="fr"><img src="/static/images/more.jpg"></a></h3>
+        <ul class="index_list">
+           <YP:list catid="11" order="id desc" limit="6" field="*">
+            <li class="clearfix"><A href="{$r.url}" style="{$r.title_style}">{$r.title|str_cut=###,30}</A><span class="fr">{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+         </YP:list>
+        </ul>
+    </div>
+    <div class="index_con fl">
+    	<h3 class="index_tit">招生政策 <a href="{$Categorys[4]['url']}"  class="fr"><img src="/static/images/more.jpg"></a></h3>
+        <ul class="index_list">
+            <YP:list catid="4" order="id desc" limit="6" field="*">
+            <li class="clearfix"><A href="{$r.url}" style="{$r.title_style}">{$r.title|str_cut=###,30}</A><span class="fr">{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+         </YP:list>
+        </ul>
+    </div>
+    <div class="index_con fl mr0">
+    	<h3 class="index_tit">报名查询 <a  href="{$Categorys[17]['url']}" class="fr"><img src="/static/images/more.jpg"></a></h3>
+        <ul class="index_list">
+           <YP:list catid="17" order="id desc" limit="6" field="*">
+            <li class="clearfix"><A href="{$r.url}" style="{$r.title_style}">{$r.title|str_cut=###,30}</A><span class="fr">{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+         </YP:list>
+        </ul>
+    </div>
+    <div class="hr clear"></div>
+    <div class="index_left fl">
+    	<h3 class="index_tit">学院就业 <a  href="{$Categorys[16]['url']}" class="fr"><img src="/static/images/more.jpg"></a></h3>
+        <ul class="index_list">
+           <YP:list catid="16" order="id desc" limit="6" field="*">
+            <li class="clearfix"><A href="{$r.url}" style="{$r.title_style}">{$r.title|str_cut=###,30}</A><span class="fr">{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+         </YP:list>
+        </ul>
+    </div>
+    <div class="index_con fl ">
+    	<h3 class="index_tit">缤纷校园 <a  href="{$Categorys[13]['url']}" class="fr"><img src="/static/images/more.jpg"></a></h3>
+        <ul class="index_list">
+            <YP:list catid="13" order="id desc" limit="6" field="*">
+            <li class="clearfix"><A href="{$r.url}" style="{$r.title_style}">{$r.title|str_cut=###,30}</A><span class="fr">{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+         </YP:list>
+        </ul>
+    </div>
+    <div class="index_con fl mr0">
+    	<h3 class="index_tit">考生问答 <a  href="{$Categorys[9]['url']}" class="fr"><img src="/static/images/more.jpg"></a></h3>
+        <ul class="index_list">
+            <YP:list catid="9" order="id desc" limit="6" field="*">
+            <li class="clearfix"><A href="{$r.url}" style="{$r.title_style}">{$r.title|str_cut=###,30}</A><span class="fr">{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+         </YP:list>
+        </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="index_pic clearfix">
+    <div class="pictitle fl"><a  href="{$Categorys[14]['url']}"><img src="/static/images/pictitle.jpg"></a></div>
+    <div class="picMarquee-left">
+			<div class="hd">
+				<a class="next"></a>
+				<a class="prev"></a>
+			</div>
+			<div class="bd">
+				<ul class="picList">
+                    <YP:list catid="14" order="id desc" limit="60">
+					<li>
+						<div class="pic"><a href="{$r.url}"><img src="{$r.thumb}" /></a></div>
+					</li>
+					</YP:list>
+					<YP:list catid="14" order="id desc" limit="60">
+					<li>
+						<div class="pic"><a href="{$r.url}"><img src="{$r.thumb}" /></a></div>
+					</li>
+					</YP:list>
+				</ul>
+			</div>
+		</div>
+	</div>
+    <script> jQuery(".picMarquee-left").slide({mainCell:".bd ul",autoPlay:true,effect:"leftMarquee",vis:6,interTime:50,trigger:"click"});</script>
+    <div class="index_link">
+<a><b>推荐链接：</b></a>
+    <YP:link  typeid="2"  linktype="1" order = "id asc" >
+  <a href="{$r['siteurl']}" target="_blank" title="{$r['name']}">{$r['name']}</a> 
+</YP:link>
+
+    </div>
+</div>

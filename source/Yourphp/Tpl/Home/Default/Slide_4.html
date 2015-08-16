@@ -1,0 +1,5 @@
+<?php  $slide_pic=$slide_link=$slide_title=array(); ?>
+{loop}
+	<?php $slide_pic[] =$r[pic];$slide_link[]=urlencode($r[link]);$slide_title[]=$r[title];	?>
+{/loop}
+style="background:url({$slide_pic['0']}) center center no-repeat;"
